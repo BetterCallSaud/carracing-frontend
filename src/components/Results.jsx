@@ -14,6 +14,7 @@ import a2c_32 from "../media/a2c_32.gif";
 
 const handleClick = () => {
   document.getElementById("tab").style.display = "none";
+  document.getElementById("main").style.display = "block";
 };
 
 const Tab = ({ gifBackground, title }) => (
@@ -47,8 +48,9 @@ const Tab = ({ gifBackground, title }) => (
 
 export default function Results() {
   return (
-    <div style={{ fontFamily: "Titillium Web" }}>
+    <>
       <Tab title="Results" gifBackground={racingGIF} />
+    <div id="main" style={{ display: 'none', fontFamily: "Titillium Web" }}>
       <nav className="w-full flex items-stretch justify-between flex-wrap bg-red-700 p-6">
         <div className="flex-grow flex items-center justify-between">
           <h1 className="text-2xl text-white italic font-bold">DS23-TEAM5</h1>
@@ -119,5 +121,7 @@ export default function Results() {
     </div>
 
     </div>
+    </>
+    
   );
 }
